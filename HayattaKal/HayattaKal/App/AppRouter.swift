@@ -18,7 +18,7 @@ final class AppRouter {
 extension AppRouter {
     func route() {
         window?.backgroundColor = UIColor.systemBackground
-        window?.rootViewController = ViewController()
+        window?.rootViewController = HomeSceneViewController()
         window?.makeKeyAndVisible()
     }
 }

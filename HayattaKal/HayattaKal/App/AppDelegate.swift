@@ -13,4 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appContainer.router.route()
         return true
     }
+    
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {}
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {}
 }
