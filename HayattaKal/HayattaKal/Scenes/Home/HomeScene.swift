@@ -11,9 +11,7 @@ struct HomeScene: View {
     @State var selectedHomeDetailModel: HomeDetailModel? = nil
 
     var body: some View {
-        NavigationStack {
-            bodyView
-        }
+        bodyView
     }
 }
 

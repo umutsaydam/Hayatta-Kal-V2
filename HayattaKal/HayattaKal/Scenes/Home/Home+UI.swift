@@ -1,5 +1,5 @@
 //
-//  HomeScene+UI.swift
+//  Home+UI.swift
 //  HayattaKal
 //
 //  Created by Yunus Emre Berdibek on 11.08.2024.
@@ -18,8 +18,8 @@ extension HomeScene {
                 cardsView
             }
         }
-        .sheet(item: $selectedHomeDetailModel) { _ in
-            //    HomeDetailScene(homeDetailModel: model)
+        .sheet(item: $selectedHomeDetailModel) { detailModel in
+            HomeDetailScene(homeDetailModel: detailModel)
         }
     }
 
@@ -43,14 +43,14 @@ extension HomeScene {
 
     var cardsView: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            HStack {
-                self.columnView(items: HomeSceneType.allCases.splitByOdd().even)
-                self.columnView(items: HomeSceneType.allCases.splitByOdd().odd)
+            VStack {
+                HStack {
+                    self.columnView(items: HomeSceneType.allCases.splitByOdd().even)
+                    self.columnView(items: HomeSceneType.allCases.splitByOdd().odd)
+                }
             }
         }
-        .clipped()
-        .padding(.horizontal, 16)
-        .padding(.top, 32)
+        .padding(.horizontal, 2)
     }
 
     func columnView(items: [HomeSceneType]) -> some View {
@@ -73,20 +73,25 @@ extension HomeScene {
                 Image(.home)
 
                 Text(home.title)
+                    .monospaced()
                     .font(.subheadline)
+                    .fontWeight(.semibold)
                     .foregroundColor(.gray4)
                     .padding(.vertical, 8)
 
                 Text(home.headline)
+                    .monospaced()
                     .font(.caption)
+                    .fontWeight(.semibold)
                     .foregroundColor(.gray3)
-                    .lineLimit(5)
+                    .lineLimit(7)
             }
 
             Spacer()
         }
+        .frame(maxHeight: 300, alignment: .top)
         .multilineTextAlignment(.leading)
-        .padding(16)
+        .padding(12)
         .background(
             Color.white
                 .cornerRadius(12)

@@ -15,7 +15,7 @@
 		BE5B3CA72C68DD5000764CCD /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CA62C68DD5000764CCD /* AppContainer.swift */; };
 		BE5B3CB72C68E24F00764CCD /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CB62C68E24F00764CCD /* HomeScene.swift */; };
 		BE5B3CB92C68E45500764CCD /* TriangleSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CB82C68E45500764CCD /* TriangleSceneViewController.swift */; };
-		BE5B3CBB2C68EF1000764CCD /* HomeScene+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CBA2C68EF1000764CCD /* HomeScene+UI.swift */; };
+		BE5B3CBB2C68EF1000764CCD /* Home+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CBA2C68EF1000764CCD /* Home+UI.swift */; };
 		BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CBE2C68EF6A00764CCD /* Array+Extension.swift */; };
 		BE5B3CC22C68EFBF00764CCD /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CC12C68EFBF00764CCD /* HomeModel.swift */; };
 		BE5B3CC52C68EFD300764CCD /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CC42C68EFD300764CCD /* SFSymbol.swift */; };
@@ -23,6 +23,8 @@
 		BE5B3CC92C68F12B00764CCD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B3CC82C68F12B00764CCD /* Colors.xcassets */; };
 		BE5B3CCB2C68F15C00764CCD /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CCA2C68F15C00764CCD /* View+Extension.swift */; };
 		BE5B3CCD2C68F18300764CCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B3CCC2C68F18300764CCD /* Images.xcassets */; };
+		BE5B3CD12C68F51D00764CCD /* HomeDetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CD02C68F51D00764CCD /* HomeDetailScene.swift */; };
+		BE5B3CD32C68F53100764CCD /* HomeDetail+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CD22C68F53100764CCD /* HomeDetail+UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,7 @@
 		BE5B3CA62C68DD5000764CCD /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		BE5B3CB62C68E24F00764CCD /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
 		BE5B3CB82C68E45500764CCD /* TriangleSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleSceneViewController.swift; sourceTree = "<group>"; };
-		BE5B3CBA2C68EF1000764CCD /* HomeScene+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScene+UI.swift"; sourceTree = "<group>"; };
+		BE5B3CBA2C68EF1000764CCD /* Home+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+UI.swift"; sourceTree = "<group>"; };
 		BE5B3CBE2C68EF6A00764CCD /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		BE5B3CC12C68EFBF00764CCD /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		BE5B3CC42C68EFD300764CCD /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		BE5B3CC82C68F12B00764CCD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BE5B3CCA2C68F15C00764CCD /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		BE5B3CCC2C68F18300764CCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE5B3CD02C68F51D00764CCD /* HomeDetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailScene.swift; sourceTree = "<group>"; };
+		BE5B3CD22C68F53100764CCD /* HomeDetail+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDetail+UI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,8 @@
 		BE5B3C8D2C67D76300764CCD /* HayattaKal */ = {
 			isa = PBXGroup;
 			children = (
-				BE5B3CC02C68EFBA00764CCD /* Models */,
 				BE5B3CA32C68DCE500764CCD /* App */,
+				BE5B3CC02C68EFBA00764CCD /* Models */,
 				BE5B3CAB2C68E06F00764CCD /* Resources */,
 				BE5B3CA82C68E05800764CCD /* Scenes */,
 				BE5B3CBC2C68EF5600764CCD /* Utils */,
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5B3CA92C68E05C00764CCD /* Home */,
+				BE5B3CCF2C68F50D00764CCD /* HomeDetail */,
 				BE5B3CAD2C68E09F00764CCD /* Launch */,
 				BE5B3CAA2C68E06300764CCD /* Triangle */,
 			);
@@ -108,8 +113,8 @@
 		BE5B3CA92C68E05C00764CCD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BE5B3CBA2C68EF1000764CCD /* Home+UI.swift */,
 				BE5B3CB62C68E24F00764CCD /* HomeScene.swift */,
-				BE5B3CBA2C68EF1000764CCD /* HomeScene+UI.swift */,
 				BE5B3C922C67D76300764CCD /* HomeSceneViewController.swift */,
 			);
 			path = Home;
@@ -175,6 +180,15 @@
 				BE5B3CC42C68EFD300764CCD /* SFSymbol.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		BE5B3CCF2C68F50D00764CCD /* HomeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CD22C68F53100764CCD /* HomeDetail+UI.swift */,
+				BE5B3CD02C68F51D00764CCD /* HomeDetailScene.swift */,
+			);
+			path = HomeDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +269,12 @@
 				BE5B3CC72C68F01400764CCD /* HomeSceneType.swift in Sources */,
 				BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */,
 				BE5B3CB92C68E45500764CCD /* TriangleSceneViewController.swift in Sources */,
-				BE5B3CBB2C68EF1000764CCD /* HomeScene+UI.swift in Sources */,
+				BE5B3CBB2C68EF1000764CCD /* Home+UI.swift in Sources */,
+				BE5B3CD32C68F53100764CCD /* HomeDetail+UI.swift in Sources */,
 				BE5B3C8F2C67D76300764CCD /* AppDelegate.swift in Sources */,
 				BE5B3CC22C68EFBF00764CCD /* HomeModel.swift in Sources */,
 				BE5B3CA52C68DD2C00764CCD /* AppRouter.swift in Sources */,
+				BE5B3CD12C68F51D00764CCD /* HomeDetailScene.swift in Sources */,
 				BE5B3CCB2C68F15C00764CCD /* View+Extension.swift in Sources */,
 				BE5B3CC52C68EFD300764CCD /* SFSymbol.swift in Sources */,
 			);
