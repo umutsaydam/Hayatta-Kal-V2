@@ -25,6 +25,11 @@
 		BE5B3CCD2C68F18300764CCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B3CCC2C68F18300764CCD /* Images.xcassets */; };
 		BE5B3CD12C68F51D00764CCD /* HomeDetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CD02C68F51D00764CCD /* HomeDetailScene.swift */; };
 		BE5B3CD32C68F53100764CCD /* HomeDetail+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CD22C68F53100764CCD /* HomeDetail+UI.swift */; };
+		BE5B3CD62C69017B00764CCD /* OnboardingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CD52C69017B00764CCD /* OnboardingScene.swift */; };
+		BE5B3CD82C69018900764CCD /* Onboarding+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CD72C69018900764CCD /* Onboarding+UI.swift */; };
+		BE5B3CDC2C6901D100764CCD /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CDB2C6901D100764CCD /* UserDefaultsManager.swift */; };
+		BE5B3CDE2C6901E200764CCD /* UserDefaultsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CDD2C6901E200764CCD /* UserDefaultsContracts.swift */; };
+		BE5B3CE02C69035D00764CCD /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CDF2C69035D00764CCD /* UserDefaultsKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		BE5B3CCC2C68F18300764CCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE5B3CD02C68F51D00764CCD /* HomeDetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailScene.swift; sourceTree = "<group>"; };
 		BE5B3CD22C68F53100764CCD /* HomeDetail+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDetail+UI.swift"; sourceTree = "<group>"; };
+		BE5B3CD52C69017B00764CCD /* OnboardingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScene.swift; sourceTree = "<group>"; };
+		BE5B3CD72C69018900764CCD /* Onboarding+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding+UI.swift"; sourceTree = "<group>"; };
+		BE5B3CDB2C6901D100764CCD /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		BE5B3CDD2C6901E200764CCD /* UserDefaultsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContracts.swift; sourceTree = "<group>"; };
+		BE5B3CDF2C69035D00764CCD /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5B3CA32C68DCE500764CCD /* App */,
+				BE5B3CD92C6901BD00764CCD /* Core */,
 				BE5B3CC02C68EFBA00764CCD /* Models */,
 				BE5B3CAB2C68E06F00764CCD /* Resources */,
 				BE5B3CA82C68E05800764CCD /* Scenes */,
@@ -105,6 +116,7 @@
 				BE5B3CA92C68E05C00764CCD /* Home */,
 				BE5B3CCF2C68F50D00764CCD /* HomeDetail */,
 				BE5B3CAD2C68E09F00764CCD /* Launch */,
+				BE5B3CD42C69016200764CCD /* Onboarding */,
 				BE5B3CAA2C68E06300764CCD /* Triangle */,
 			);
 			path = Scenes;
@@ -176,6 +188,7 @@
 		BE5B3CC32C68EFCE00764CCD /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				BE5B3CDF2C69035D00764CCD /* UserDefaultsKey.swift */,
 				BE5B3CC62C68F01400764CCD /* HomeSceneType.swift */,
 				BE5B3CC42C68EFD300764CCD /* SFSymbol.swift */,
 			);
@@ -189,6 +202,32 @@
 				BE5B3CD02C68F51D00764CCD /* HomeDetailScene.swift */,
 			);
 			path = HomeDetail;
+			sourceTree = "<group>";
+		};
+		BE5B3CD42C69016200764CCD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CD72C69018900764CCD /* Onboarding+UI.swift */,
+				BE5B3CD52C69017B00764CCD /* OnboardingScene.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BE5B3CD92C6901BD00764CCD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CDA2C6901C000764CCD /* UserDefaults */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BE5B3CDA2C6901C000764CCD /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CDD2C6901E200764CCD /* UserDefaultsContracts.swift */,
+				BE5B3CDB2C6901D100764CCD /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,19 +302,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5B3CE02C69035D00764CCD /* UserDefaultsKey.swift in Sources */,
 				BE5B3C932C67D76300764CCD /* HomeSceneViewController.swift in Sources */,
 				BE5B3CB72C68E24F00764CCD /* HomeScene.swift in Sources */,
+				BE5B3CDC2C6901D100764CCD /* UserDefaultsManager.swift in Sources */,
 				BE5B3CA72C68DD5000764CCD /* AppContainer.swift in Sources */,
+				BE5B3CD62C69017B00764CCD /* OnboardingScene.swift in Sources */,
 				BE5B3CC72C68F01400764CCD /* HomeSceneType.swift in Sources */,
 				BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */,
 				BE5B3CB92C68E45500764CCD /* TriangleSceneViewController.swift in Sources */,
 				BE5B3CBB2C68EF1000764CCD /* Home+UI.swift in Sources */,
 				BE5B3CD32C68F53100764CCD /* HomeDetail+UI.swift in Sources */,
 				BE5B3C8F2C67D76300764CCD /* AppDelegate.swift in Sources */,
+				BE5B3CD82C69018900764CCD /* Onboarding+UI.swift in Sources */,
 				BE5B3CC22C68EFBF00764CCD /* HomeModel.swift in Sources */,
 				BE5B3CA52C68DD2C00764CCD /* AppRouter.swift in Sources */,
 				BE5B3CD12C68F51D00764CCD /* HomeDetailScene.swift in Sources */,
 				BE5B3CCB2C68F15C00764CCD /* View+Extension.swift in Sources */,
+				BE5B3CDE2C6901E200764CCD /* UserDefaultsContracts.swift in Sources */,
 				BE5B3CC52C68EFD300764CCD /* SFSymbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
