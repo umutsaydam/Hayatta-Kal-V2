@@ -1,5 +1,5 @@
 //
-//  HomeScenePresentation.swift
+//  HomeModel.swift
 //  HayattaKal
 //
 //  Created by Yunus Emre Berdibek on 11.08.2024.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct HomeScenePresentation: Identifiable {
+struct HomeDetailModel: Identifiable {
     let id: String = UUID().uuidString
     let title: String
     let headline: String
     let description: [String]
 
-    static let homeDetailItems: [HomeScenePresentation] = [
-        HomeScenePresentation(title: "Depremden Önce Yapılması Gerekenler",
+    static let homeDetailItems: [HomeDetailModel] = [
+        HomeDetailModel(title: "Depremden Önce Yapılması Gerekenler",
                         headline: "Deprem öncesi alınması gereken önlemler ve yapılması gereken hazırlıklar, olası bir depremin etkilerini azaltmak ve can kayıplarını önlemek adına oldukça önemlidir. İşte deprem öncesi yapılması gerekenler:",
                         description: [
                             "1. Deprem Planı Hazırlayın: Aile bireyleriyle birlikte bir deprem planı oluşturun. Toplanma noktalarını belirleyin ve deprem sırasında ne yapmanız gerektiğini önceden planlayın.",
@@ -30,7 +30,7 @@ struct HomeScenePresentation: Identifiable {
 
                         ]),
 
-        HomeScenePresentation(title: "Deprem Sırasında Yapılması Gerekenler",
+        HomeDetailModel(title: "Deprem Sırasında Yapılması Gerekenler",
                         headline: "Deprem sırasında yapılması gerekenler, deprem anında hayatta kalmak ve yaralanmalardan kaçınmak için oldukça önemlidir. İşte deprem sırasında yapılması gerekenler:",
                         description: [
                             "1. Sakin Olun: Panik yapmayın ve sakin kalmaya çalışın. Panik, yanlış hareketler yapmanıza neden olabilir.",
@@ -44,7 +44,7 @@ struct HomeScenePresentation: Identifiable {
                             "9. Gaza ve Ateşe Dikkat Edin: Deprem sonrasında gaz kaçakları ve yangınlar olabilir. Çakmak veya kibrit kullanmayın ve elektrik anahtarlarını açıp kapatmayın."
                         ]),
 
-        HomeScenePresentation(title: "Depremden Sonra Yapılması Gerekenler",
+        HomeDetailModel(title: "Depremden Sonra Yapılması Gerekenler",
                         headline: "Deprem sonrasında yapılması gerekenler, güvenliğinizi sağlamak ve olası tehlikeleri önlemek adına oldukça önemlidir. İşte deprem sonrasında yapılması gerekenler:",
                         description: [
                             " 1. Sakin Kalın: Panik yapmayın ve sakinliğinizi koruyun. Düşünceli ve dikkatli hareket edin.",
@@ -63,7 +63,7 @@ struct HomeScenePresentation: Identifiable {
                             " 14. Ulaşımı ve Trafiği Dikkatli Kullanın: Zorunlu olmadıkça araç kullanmayın ve acil durum ekiplerinin geçişlerini engellemeyin."
                         ]),
 
-        HomeScenePresentation(title: "Deprem Çantasında Ne Bulundurulmalı?",
+        HomeDetailModel(title: "Deprem Çantasında Ne Bulundurulmalı?",
                         headline: "Deprem çantası, olası bir deprem durumunda hayatta kalmanızı ve temel ihtiyaçlarınızı karşılamanızı sağlayacak malzemeleri içermelidir. İşte deprem çantasında bulundurulması gereken temel malzemeler:",
                         description: [
                             "1. Su: Kişi başına en az 3 gün yetecek miktarda içme suyu.",

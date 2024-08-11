@@ -13,9 +13,16 @@
 		BE5B3C9B2C67D76400764CCD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BE5B3C9A2C67D76400764CCD /* Base */; };
 		BE5B3CA52C68DD2C00764CCD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CA42C68DD2C00764CCD /* AppRouter.swift */; };
 		BE5B3CA72C68DD5000764CCD /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CA62C68DD5000764CCD /* AppContainer.swift */; };
-		BE5B3CB52C68E1FA00764CCD /* HomeScenePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CB42C68E1FA00764CCD /* HomeScenePresentation.swift */; };
 		BE5B3CB72C68E24F00764CCD /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CB62C68E24F00764CCD /* HomeScene.swift */; };
 		BE5B3CB92C68E45500764CCD /* TriangleSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CB82C68E45500764CCD /* TriangleSceneViewController.swift */; };
+		BE5B3CBB2C68EF1000764CCD /* HomeScene+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CBA2C68EF1000764CCD /* HomeScene+UI.swift */; };
+		BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CBE2C68EF6A00764CCD /* Array+Extension.swift */; };
+		BE5B3CC22C68EFBF00764CCD /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CC12C68EFBF00764CCD /* HomeModel.swift */; };
+		BE5B3CC52C68EFD300764CCD /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CC42C68EFD300764CCD /* SFSymbol.swift */; };
+		BE5B3CC72C68F01400764CCD /* HomeSceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CC62C68F01400764CCD /* HomeSceneType.swift */; };
+		BE5B3CC92C68F12B00764CCD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B3CC82C68F12B00764CCD /* Colors.xcassets */; };
+		BE5B3CCB2C68F15C00764CCD /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CCA2C68F15C00764CCD /* View+Extension.swift */; };
+		BE5B3CCD2C68F18300764CCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B3CCC2C68F18300764CCD /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +34,16 @@
 		BE5B3C9C2C67D76400764CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE5B3CA42C68DD2C00764CCD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		BE5B3CA62C68DD5000764CCD /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
-		BE5B3CB42C68E1FA00764CCD /* HomeScenePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScenePresentation.swift; sourceTree = "<group>"; };
 		BE5B3CB62C68E24F00764CCD /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
 		BE5B3CB82C68E45500764CCD /* TriangleSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleSceneViewController.swift; sourceTree = "<group>"; };
+		BE5B3CBA2C68EF1000764CCD /* HomeScene+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScene+UI.swift"; sourceTree = "<group>"; };
+		BE5B3CBE2C68EF6A00764CCD /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		BE5B3CC12C68EFBF00764CCD /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		BE5B3CC42C68EFD300764CCD /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
+		BE5B3CC62C68F01400764CCD /* HomeSceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneType.swift; sourceTree = "<group>"; };
+		BE5B3CC82C68F12B00764CCD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BE5B3CCA2C68F15C00764CCD /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		BE5B3CCC2C68F18300764CCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +76,11 @@
 		BE5B3C8D2C67D76300764CCD /* HayattaKal */ = {
 			isa = PBXGroup;
 			children = (
+				BE5B3CC02C68EFBA00764CCD /* Models */,
 				BE5B3CA32C68DCE500764CCD /* App */,
 				BE5B3CAB2C68E06F00764CCD /* Resources */,
 				BE5B3CA82C68E05800764CCD /* Scenes */,
+				BE5B3CBC2C68EF5600764CCD /* Utils */,
 			);
 			path = HayattaKal;
 			sourceTree = "<group>";
@@ -93,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5B3CB62C68E24F00764CCD /* HomeScene.swift */,
-				BE5B3CB42C68E1FA00764CCD /* HomeScenePresentation.swift */,
+				BE5B3CBA2C68EF1000764CCD /* HomeScene+UI.swift */,
 				BE5B3C922C67D76300764CCD /* HomeSceneViewController.swift */,
 			);
 			path = Home;
@@ -111,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				BE5B3C972C67D76400764CCD /* Assets.xcassets */,
+				BE5B3CC82C68F12B00764CCD /* Colors.xcassets */,
+				BE5B3CCC2C68F18300764CCD /* Images.xcassets */,
 				BE5B3C9C2C67D76400764CCD /* Info.plist */,
 			);
 			path = Resources;
@@ -122,6 +140,41 @@
 				BE5B3C992C67D76400764CCD /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		BE5B3CBC2C68EF5600764CCD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CC32C68EFCE00764CCD /* Enum */,
+				BE5B3CBD2C68EF5B00764CCD /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BE5B3CBD2C68EF5B00764CCD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CBE2C68EF6A00764CCD /* Array+Extension.swift */,
+				BE5B3CCA2C68F15C00764CCD /* View+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BE5B3CC02C68EFBA00764CCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CC12C68EFBF00764CCD /* HomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE5B3CC32C68EFCE00764CCD /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CC62C68F01400764CCD /* HomeSceneType.swift */,
+				BE5B3CC42C68EFD300764CCD /* SFSymbol.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +235,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5B3CC92C68F12B00764CCD /* Colors.xcassets in Resources */,
+				BE5B3CCD2C68F18300764CCD /* Images.xcassets in Resources */,
 				BE5B3C982C67D76400764CCD /* Assets.xcassets in Resources */,
 				BE5B3C9B2C67D76400764CCD /* Base in Resources */,
 			);
@@ -197,10 +252,15 @@
 				BE5B3C932C67D76300764CCD /* HomeSceneViewController.swift in Sources */,
 				BE5B3CB72C68E24F00764CCD /* HomeScene.swift in Sources */,
 				BE5B3CA72C68DD5000764CCD /* AppContainer.swift in Sources */,
+				BE5B3CC72C68F01400764CCD /* HomeSceneType.swift in Sources */,
+				BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */,
 				BE5B3CB92C68E45500764CCD /* TriangleSceneViewController.swift in Sources */,
-				BE5B3CB52C68E1FA00764CCD /* HomeScenePresentation.swift in Sources */,
+				BE5B3CBB2C68EF1000764CCD /* HomeScene+UI.swift in Sources */,
 				BE5B3C8F2C67D76300764CCD /* AppDelegate.swift in Sources */,
+				BE5B3CC22C68EFBF00764CCD /* HomeModel.swift in Sources */,
 				BE5B3CA52C68DD2C00764CCD /* AppRouter.swift in Sources */,
+				BE5B3CCB2C68F15C00764CCD /* View+Extension.swift in Sources */,
+				BE5B3CC52C68EFD300764CCD /* SFSymbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,10 +27,10 @@ private extension HomeSceneViewController {
         homeHostingVC.view.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            homeHostingVC.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            homeHostingVC.view.topAnchor.constraint(equalTo: view.topAnchor),
             homeHostingVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             homeHostingVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            homeHostingVC.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            homeHostingVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
