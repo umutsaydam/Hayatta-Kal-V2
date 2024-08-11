@@ -17,6 +17,7 @@ extension HomeScene {
 
                 cardsView
             }
+            .padding()
         }
         .sheet(item: $selectedHomeDetailModel) { detailModel in
             HomeDetailScene(homeDetailModel: detailModel)
@@ -43,11 +44,9 @@ extension HomeScene {
 
     var cardsView: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack {
-                HStack {
-                    self.columnView(items: HomeSceneType.allCases.splitByOdd().even)
-                    self.columnView(items: HomeSceneType.allCases.splitByOdd().odd)
-                }
+            HStack {
+                self.columnView(items: HomeSceneType.allCases.splitByOdd().even)
+                self.columnView(items: HomeSceneType.allCases.splitByOdd().odd)
             }
         }
         .padding(.horizontal, 2)
@@ -91,12 +90,12 @@ extension HomeScene {
         }
         .frame(maxHeight: 300, alignment: .top)
         .multilineTextAlignment(.leading)
-        .padding(12)
+        .padding(8)
         .background(
             Color.white
                 .cornerRadius(12)
                 .commonShadow(color: .shadow1)
         )
-        .padding(8)
+        .padding(4)
     }
 }
