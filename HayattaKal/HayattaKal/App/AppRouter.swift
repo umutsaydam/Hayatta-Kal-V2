@@ -32,6 +32,6 @@ extension AppRouter {
             return
         }
 
-        window?.rootViewController = HomeViewController()
+        window?.rootViewController = TabBarController()
     }
 }

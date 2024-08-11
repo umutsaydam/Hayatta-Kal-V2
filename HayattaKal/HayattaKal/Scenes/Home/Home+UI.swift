@@ -16,6 +16,8 @@ extension HomeScene {
                 header
 
                 cardsView
+                
+                Spacer()
             }
             .padding()
         }

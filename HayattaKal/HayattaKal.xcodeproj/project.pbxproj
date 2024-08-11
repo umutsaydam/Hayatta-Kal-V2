@@ -14,7 +14,7 @@
 		BE5B3CA52C68DD2C00764CCD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CA42C68DD2C00764CCD /* AppRouter.swift */; };
 		BE5B3CA72C68DD5000764CCD /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CA62C68DD5000764CCD /* AppContainer.swift */; };
 		BE5B3CB72C68E24F00764CCD /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CB62C68E24F00764CCD /* HomeScene.swift */; };
-		BE5B3CB92C68E45500764CCD /* TriangleSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CB82C68E45500764CCD /* TriangleSceneViewController.swift */; };
+		BE5B3CB92C68E45500764CCD /* TriangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CB82C68E45500764CCD /* TriangleViewController.swift */; };
 		BE5B3CBB2C68EF1000764CCD /* Home+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CBA2C68EF1000764CCD /* Home+UI.swift */; };
 		BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CBE2C68EF6A00764CCD /* Array+Extension.swift */; };
 		BE5B3CC22C68EFBF00764CCD /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CC12C68EFBF00764CCD /* HomeModel.swift */; };
@@ -34,6 +34,7 @@
 		BE5B3CE42C69178D00764CCD /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CE32C69178D00764CCD /* OnboardingViewModel.swift */; };
 		BE5B3CE62C69189500764CCD /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CE52C69189500764CCD /* OnboardingModel.swift */; };
 		BE5B3CEA2C6918E700764CCD /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CE92C6918E700764CCD /* Auth.swift */; };
+		BE5B3CED2C691EB800764CCD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CEC2C691EB800764CCD /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,7 @@
 		BE5B3CA42C68DD2C00764CCD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		BE5B3CA62C68DD5000764CCD /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		BE5B3CB62C68E24F00764CCD /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
-		BE5B3CB82C68E45500764CCD /* TriangleSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleSceneViewController.swift; sourceTree = "<group>"; };
+		BE5B3CB82C68E45500764CCD /* TriangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleViewController.swift; sourceTree = "<group>"; };
 		BE5B3CBA2C68EF1000764CCD /* Home+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+UI.swift"; sourceTree = "<group>"; };
 		BE5B3CBE2C68EF6A00764CCD /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		BE5B3CC12C68EFBF00764CCD /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		BE5B3CE32C69178D00764CCD /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		BE5B3CE52C69189500764CCD /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		BE5B3CE92C6918E700764CCD /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		BE5B3CEC2C691EB800764CCD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				BE5B3CCF2C68F50D00764CCD /* HomeDetail */,
 				BE5B3CAD2C68E09F00764CCD /* Launch */,
 				BE5B3CD42C69016200764CCD /* Onboarding */,
+				BE5B3CEB2C691E8B00764CCD /* Tab */,
 				BE5B3CAA2C68E06300764CCD /* Triangle */,
 			);
 			path = Scenes;
@@ -144,7 +147,7 @@
 		BE5B3CAA2C68E06300764CCD /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
-				BE5B3CB82C68E45500764CCD /* TriangleSceneViewController.swift */,
+				BE5B3CB82C68E45500764CCD /* TriangleViewController.swift */,
 			);
 			path = Triangle;
 			sourceTree = "<group>";
@@ -258,6 +261,14 @@
 			path = Modifier;
 			sourceTree = "<group>";
 		};
+		BE5B3CEB2C691E8B00764CCD /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B3CEC2C691EB800764CCD /* TabBarController.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,7 +349,8 @@
 				BE5B3CD62C69017B00764CCD /* OnboardingScene.swift in Sources */,
 				BE5B3CC72C68F01400764CCD /* HomeSceneType.swift in Sources */,
 				BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */,
-				BE5B3CB92C68E45500764CCD /* TriangleSceneViewController.swift in Sources */,
+				BE5B3CB92C68E45500764CCD /* TriangleViewController.swift in Sources */,
+				BE5B3CED2C691EB800764CCD /* TabBarController.swift in Sources */,
 				BE5B3CBB2C68EF1000764CCD /* Home+UI.swift in Sources */,
 				BE5B3CD32C68F53100764CCD /* HomeDetail+UI.swift in Sources */,
 				BE5B3C8F2C67D76300764CCD /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  TriangleSceneViewController.swift
+//  TriangleViewController.swift
 //  HayattaKal
 //
 //  Created by Yunus Emre Berdibek on 11.08.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TriangleSceneViewController: UIViewController {
+final class TriangleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
