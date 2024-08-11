@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct OnboardingScene: View {
+    @StateObject var viewModel: OnboardingViewModel = .init()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        bodyView
+            .onAppear(perform: onAppear)
     }
+
+    func onAppear() {}
 }
 
 #Preview {

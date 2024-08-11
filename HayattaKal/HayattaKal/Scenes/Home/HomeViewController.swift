@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  HayattaKal
 //
 //  Created by Yunus Emre Berdibek on 10.08.2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-final class HomeSceneViewController: UIViewController {
+final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,7 +16,7 @@ final class HomeSceneViewController: UIViewController {
     }
 }
 
-private extension HomeSceneViewController {
+private extension HomeViewController {
     func setUp() {
         let homeScene = HomeScene()
         let homeHostingVC = UIHostingController(rootView: homeScene)
@@ -36,5 +36,5 @@ private extension HomeSceneViewController {
 }
 
 #Preview {
-    HomeSceneViewController()
+    HomeViewController()
 }
