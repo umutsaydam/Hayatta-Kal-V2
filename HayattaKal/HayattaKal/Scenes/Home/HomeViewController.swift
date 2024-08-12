@@ -16,6 +16,8 @@ final class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - Privates
+
 private extension HomeViewController {
     func setUp() {
         let homeScene = HomeScene()

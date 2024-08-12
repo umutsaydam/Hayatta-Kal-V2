@@ -10,14 +10,16 @@ import UIKit
 final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewControllers = setUp()
+        
         configureTabBarAppearance()
+        viewControllers = setUpTabBar()
     }
 }
 
+// MARK: - Privates
+
 private extension TabBarController {
-    func setUp() -> [UIViewController] {
+    func setUpTabBar() -> [UIViewController] {
         let homeVC = HomeViewController()
         homeVC.tabBarItem = UITabBarItem(
             title: "Home",
