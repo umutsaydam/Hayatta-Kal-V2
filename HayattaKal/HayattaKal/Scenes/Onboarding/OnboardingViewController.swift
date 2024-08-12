@@ -12,12 +12,14 @@ final class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setUp()
+        setUpViewController()
     }
 }
 
+// MARK: - Privates
+
 private extension OnboardingViewController {
-    func setUp() {
+    func setUpViewController() {
         let onboardingScene = OnboardingScene()
         let onboardingHostingVC = UIHostingController(rootView: onboardingScene)
 
