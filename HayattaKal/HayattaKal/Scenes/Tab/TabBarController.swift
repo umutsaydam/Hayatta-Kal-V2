@@ -31,6 +31,7 @@ private extension TabBarController {
             title: "Triangle",
             image: UIImage(systemName: SFSymbol.camera.rawValue),
             tag: 1)
+        triagleVC.viewModel = appContainer.triangleViewModel
 
         return [
             homeVC, triagleVC

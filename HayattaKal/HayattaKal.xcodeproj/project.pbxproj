@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE43C01D2C6AA3DC00F515ED /* FCRN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BE43C01C2C6AA3DC00F515ED /* FCRN.mlmodel */; };
-		BE43C01F2C6AA3E600F515ED /* HKOD.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = BE43C01E2C6AA3E600F515ED /* HKOD.mlpackage */; };
 		BE43C0212C6AA40500F515ED /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43C0202C6AA40500F515ED /* Presentable.swift */; };
 		BE43C0252C6AA40E00F515ED /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43C0242C6AA40E00F515ED /* Alertable.swift */; };
 		BE43C0272C6AA41800F515ED /* Pushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43C0262C6AA41800F515ED /* Pushable.swift */; };
@@ -44,12 +42,13 @@
 		BE5B3CE62C69189500764CCD /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CE52C69189500764CCD /* OnboardingModel.swift */; };
 		BE5B3CEA2C6918E700764CCD /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CE92C6918E700764CCD /* Auth.swift */; };
 		BE5B3CED2C691EB800764CCD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B3CEC2C691EB800764CCD /* TabBarController.swift */; };
+		BE72ED942C6C063B0073B47E /* TriangleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72ED932C6C063B0073B47E /* TriangleViewModel.swift */; };
+		BE72ED962C6C064B0073B47E /* TriangleContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72ED952C6C064B0073B47E /* TriangleContracts.swift */; };
+		BE72ED9D2C6C0A000073B47E /* LoadableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72ED9C2C6C0A000073B47E /* LoadableViewController.swift */; };
 		BEF2C3342C6963730027A7EB /* PDFViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF2C3332C6963730027A7EB /* PDFViewerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE43C01C2C6AA3DC00F515ED /* FCRN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FCRN.mlmodel; sourceTree = "<group>"; };
-		BE43C01E2C6AA3E600F515ED /* HKOD.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = HKOD.mlpackage; sourceTree = "<group>"; };
 		BE43C0202C6AA40500F515ED /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		BE43C0242C6AA40E00F515ED /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		BE43C0262C6AA41800F515ED /* Pushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pushable.swift; sourceTree = "<group>"; };
@@ -87,6 +86,9 @@
 		BE5B3CE52C69189500764CCD /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		BE5B3CE92C6918E700764CCD /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		BE5B3CEC2C691EB800764CCD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		BE72ED932C6C063B0073B47E /* TriangleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleViewModel.swift; sourceTree = "<group>"; };
+		BE72ED952C6C064B0073B47E /* TriangleContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleContracts.swift; sourceTree = "<group>"; };
+		BE72ED9C2C6C0A000073B47E /* LoadableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableViewController.swift; sourceTree = "<group>"; };
 		BEF2C3332C6963730027A7EB /* PDFViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,15 +103,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE43C01B2C6AA3C600F515ED /* MLModel */ = {
-			isa = PBXGroup;
-			children = (
-				BE43C01C2C6AA3DC00F515ED /* FCRN.mlmodel */,
-				BE43C01E2C6AA3E600F515ED /* HKOD.mlpackage */,
-			);
-			path = MLModel;
-			sourceTree = "<group>";
-		};
 		BE5B3C822C67D76300764CCD = {
 			isa = PBXGroup;
 			children = (
@@ -175,8 +168,9 @@
 		BE5B3CAA2C68E06300764CCD /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
+				BE72ED952C6C064B0073B47E /* TriangleContracts.swift */,
 				BE5B3CB82C68E45500764CCD /* TriangleViewController.swift */,
-				BEF2C3332C6963730027A7EB /* PDFViewerViewController.swift */,
+				BE72ED932C6C063B0073B47E /* TriangleViewModel.swift */,
 			);
 			path = Triangle;
 			sourceTree = "<group>";
@@ -279,8 +273,8 @@
 		BE5B3CE72C6918CA00764CCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				BE72ED972C6C06620073B47E /* Controller */,
 				BEF2C3352C69F4240027A7EB /* Delegate */,
-				BE43C01B2C6AA3C600F515ED /* MLModel */,
 				BE5B3CC02C68EFBA00764CCD /* Model */,
 				BE5B3CE82C6918CD00764CCD /* Modifier */,
 			);
@@ -301,6 +295,15 @@
 				BE5B3CEC2C691EB800764CCD /* TabBarController.swift */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		BE72ED972C6C06620073B47E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE72ED9C2C6C0A000073B47E /* LoadableViewController.swift */,
+				BEF2C3332C6963730027A7EB /* PDFViewerViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		BEF2C3352C69F4240027A7EB /* Delegate */ = {
@@ -392,9 +395,9 @@
 				BE43C0272C6AA41800F515ED /* Pushable.swift in Sources */,
 				BE5B3CB72C68E24F00764CCD /* HomeScene.swift in Sources */,
 				BE5B3CDC2C6901D100764CCD /* UserDefaultsManager.swift in Sources */,
+				BE72ED942C6C063B0073B47E /* TriangleViewModel.swift in Sources */,
 				BE5B3CA72C68DD5000764CCD /* AppContainer.swift in Sources */,
 				BE5B3CD62C69017B00764CCD /* OnboardingScene.swift in Sources */,
-				BE43C01F2C6AA3E600F515ED /* HKOD.mlpackage in Sources */,
 				BE5B3CC72C68F01400764CCD /* HomeSceneType.swift in Sources */,
 				BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */,
 				BE43C02F2C6AA88E00F515ED /* PDFModel.swift in Sources */,
@@ -406,6 +409,7 @@
 				BEF2C3342C6963730027A7EB /* PDFViewerViewController.swift in Sources */,
 				BE5B3C8F2C67D76300764CCD /* AppDelegate.swift in Sources */,
 				BE5B3CD82C69018900764CCD /* Onboarding+UI.swift in Sources */,
+				BE72ED962C6C064B0073B47E /* TriangleContracts.swift in Sources */,
 				BE5B3CEA2C6918E700764CCD /* Auth.swift in Sources */,
 				BE5B3CC22C68EFBF00764CCD /* HomeModel.swift in Sources */,
 				BE5B3CE62C69189500764CCD /* OnboardingModel.swift in Sources */,
@@ -413,10 +417,10 @@
 				BE5B3CD12C68F51D00764CCD /* HomeDetailScene.swift in Sources */,
 				BE5B3CCB2C68F15C00764CCD /* View+Extension.swift in Sources */,
 				BE43C0252C6AA40E00F515ED /* Alertable.swift in Sources */,
-				BE43C01D2C6AA3DC00F515ED /* FCRN.mlmodel in Sources */,
 				BE5B3CDE2C6901E200764CCD /* UserDefaultsContracts.swift in Sources */,
 				BE5B3CE22C6916F500764CCD /* OnboardingViewController.swift in Sources */,
 				BE43C0292C6AA42100F515ED /* Loadable.swift in Sources */,
+				BE72ED9D2C6C0A000073B47E /* LoadableViewController.swift in Sources */,
 				BE43C02B2C6AA60E00F515ED /* Dismissable.swift in Sources */,
 				BE5B3CE42C69178D00764CCD /* OnboardingViewModel.swift in Sources */,
 				BE43C02D2C6AA66E00F515ED /* AlertModel.swift in Sources */,
