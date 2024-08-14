@@ -15,14 +15,22 @@ final class TriangleViewModel {
 
 extension TriangleViewModel: TriangleViewModelProtocol {
     func viewDidLoad() {
-        delegate?.loadable(true)
+        delegate?.showUnavailable(.imagePicker)
     }
 
     func viewWillAppear() {}
 
     func viewDidAppear() {}
 
-    func didSelectImage(_ image: UIImage) {}
+    func handleImagePickerOutput(_ output: TriangleViewControllerImagePickerOutput) {
+        switch output {
+        case .didSelectImage(let uIImage):
+            delegate?.dismiss(true)
+        //    delegate?.hideUnavailable()
+        case .didSelectCancel:
+            delegate?.dismiss(true)
+        }
+    }
 }
 
 // MARK: - Privates
@@ -84,7 +92,6 @@ private extension TriangleViewModel {
             try data.write(to: pdfURL)
             completion(pdfURL)
         } catch {
-            print("Error saving PDF: \(error.localizedDescription)")
             completion(nil)
         }
     }

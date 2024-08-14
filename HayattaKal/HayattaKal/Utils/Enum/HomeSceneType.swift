@@ -37,6 +37,6 @@ enum HomeSceneType: String, CaseIterable {
     var url: String { "" }
 
     var image: String {
-        SFSymbol.fileMenuAndSelection.rawValue
+        SFSymbol.file_menu_and_selection.rawValue
     }
 }

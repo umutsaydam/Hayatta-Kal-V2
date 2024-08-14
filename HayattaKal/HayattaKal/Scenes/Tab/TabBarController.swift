@@ -10,7 +10,7 @@ import UIKit
 final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureTabBarAppearance()
         viewControllers = setUpTabBar()
     }
@@ -25,7 +25,6 @@ private extension TabBarController {
             title: "Home",
             image: UIImage(systemName: SFSymbol.house.rawValue),
             tag: 0)
-        
 
         let triagleVC = TriangleViewController()
         triagleVC.tabBarItem = UITabBarItem(
@@ -47,7 +46,7 @@ private extension TabBarController {
         if #available(iOS 15.0, *) {
             tabBar.scrollEdgeAppearance = appearance
         }
-        
+
         tabBar.tintColor = UIColor.halloweenOrange
     }
 }

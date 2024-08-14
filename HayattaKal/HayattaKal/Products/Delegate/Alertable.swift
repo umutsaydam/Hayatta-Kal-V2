@@ -20,7 +20,7 @@ extension Alertable where Self: UIViewController {
         let primaryAction = UIAlertAction(title: alert.primaryButton, style: .cancel)
         controller.addAction(primaryAction)
 
-        if let secondaryButton = alert.secondaryButton {
+        if alert.secondaryButton != nil {
             let secondaryAction = UIAlertAction(title: alert.secondaryButton, style: .destructive)
             controller.addAction(secondaryAction)
         }

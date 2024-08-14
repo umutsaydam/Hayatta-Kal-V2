@@ -14,15 +14,22 @@ protocol TriangleViewModelProtocol {
     func viewDidLoad()
     func viewWillAppear()
     func viewDidAppear()
-    func didSelectImage(_ image: UIImage)
+    func handleImagePickerOutput(_ output: TriangleViewControllerImagePickerOutput)
+}
+
+/// ViewController output
+enum TriangleViewControllerImagePickerOutput {
+    case didSelectImage(UIImage)
+    case didSelectCancel
 }
 
 /// View
-protocol TriangleViewModelDelegate: AnyObject, Alertable, Dismissable, Loadable, Presentable {
+protocol TriangleViewModelDelegate: AnyObject, Alertable, Dismissable, Loadable, Presentable, Unavailable {
     func handleViewModelOutput(_ output: TriangleViewModelOutput)
 }
 
 // ViewModel output
 enum TriangleViewModelOutput {
     case setIsLoading(Bool)
+    case selectImage(Bool)
 }

@@ -11,7 +11,7 @@ protocol Loadable {
     func loadable(_ bool: Bool)
 }
 
-extension Loadable where Self: LoadableViewController {
+extension Loadable where Self: StatefulViewController {
     func loadable(_ bool: Bool) {
         DispatchQueue.main.async {
             if bool {
