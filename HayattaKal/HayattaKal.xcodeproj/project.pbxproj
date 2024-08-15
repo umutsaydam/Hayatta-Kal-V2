@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		BE1FF8092C6D617E000635C1 /* UnavailableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF8082C6D617E000635C1 /* UnavailableModel.swift */; };
 		BE1FF80B2C6D6422000635C1 /* Unavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF80A2C6D6422000635C1 /* Unavailable.swift */; };
+		BE1FF80E2C6DF2C4000635C1 /* HKOD.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF80D2C6DF2C4000635C1 /* HKOD.mlpackage */; };
+		BE1FF8102C6DF2D3000635C1 /* FCRN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF80F2C6DF2D3000635C1 /* FCRN.mlmodel */; };
+		BE1FF8132C6DF347000635C1 /* MLMultiArray+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF8122C6DF347000635C1 /* MLMultiArray+Extension.swift */; };
+		BE1FF8152C6DF364000635C1 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF8142C6DF364000635C1 /* UIImage+Extension.swift */; };
+		BE1FF8172C6DF3A7000635C1 /* MLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF8162C6DF3A7000635C1 /* MLManager.swift */; };
+		BE1FF8192C6DF45D000635C1 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF8182C6DF45D000635C1 /* Graph.swift */; };
+		BE1FF81B2C6DF463000635C1 /* GraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF81A2C6DF463000635C1 /* GraphNode.swift */; };
+		BE1FF81D2C6DF473000635C1 /* GraphNeighbor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF81C2C6DF473000635C1 /* GraphNeighbor.swift */; };
+		BE1FF8202C6DF4EC000635C1 /* GraphNodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF81F2C6DF4EC000635C1 /* GraphNodeType.swift */; };
+		BE1FF8222C6E0B98000635C1 /* MLManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FF8212C6E0B98000635C1 /* MLManagerProtocol.swift */; };
 		BE43C0212C6AA40500F515ED /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43C0202C6AA40500F515ED /* Presentable.swift */; };
 		BE43C0252C6AA40E00F515ED /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43C0242C6AA40E00F515ED /* Alertable.swift */; };
 		BE43C0272C6AA41800F515ED /* Pushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43C0262C6AA41800F515ED /* Pushable.swift */; };
@@ -53,6 +63,16 @@
 /* Begin PBXFileReference section */
 		BE1FF8082C6D617E000635C1 /* UnavailableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnavailableModel.swift; sourceTree = "<group>"; };
 		BE1FF80A2C6D6422000635C1 /* Unavailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unavailable.swift; sourceTree = "<group>"; };
+		BE1FF80D2C6DF2C4000635C1 /* HKOD.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = HKOD.mlpackage; sourceTree = "<group>"; };
+		BE1FF80F2C6DF2D3000635C1 /* FCRN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FCRN.mlmodel; sourceTree = "<group>"; };
+		BE1FF8122C6DF347000635C1 /* MLMultiArray+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Extension.swift"; sourceTree = "<group>"; };
+		BE1FF8142C6DF364000635C1 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		BE1FF8162C6DF3A7000635C1 /* MLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLManager.swift; sourceTree = "<group>"; };
+		BE1FF8182C6DF45D000635C1 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		BE1FF81A2C6DF463000635C1 /* GraphNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphNode.swift; sourceTree = "<group>"; };
+		BE1FF81C2C6DF473000635C1 /* GraphNeighbor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphNeighbor.swift; sourceTree = "<group>"; };
+		BE1FF81F2C6DF4EC000635C1 /* GraphNodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphNodeType.swift; sourceTree = "<group>"; };
+		BE1FF8212C6E0B98000635C1 /* MLManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLManagerProtocol.swift; sourceTree = "<group>"; };
 		BE43C0202C6AA40500F515ED /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		BE43C0242C6AA40E00F515ED /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		BE43C0262C6AA41800F515ED /* Pushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pushable.swift; sourceTree = "<group>"; };
@@ -107,6 +127,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1FF80C2C6DF2B1000635C1 /* MLModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE1FF80F2C6DF2D3000635C1 /* FCRN.mlmodel */,
+				BE1FF80D2C6DF2C4000635C1 /* HKOD.mlpackage */,
+			);
+			path = MLModel;
+			sourceTree = "<group>";
+		};
+		BE1FF8112C6DF30A000635C1 /* MLManager */ = {
+			isa = PBXGroup;
+			children = (
+				BE1FF8182C6DF45D000635C1 /* Graph.swift */,
+				BE1FF8162C6DF3A7000635C1 /* MLManager.swift */,
+				BE1FF8212C6E0B98000635C1 /* MLManagerProtocol.swift */,
+				BE1FF81E2C6DF481000635C1 /* Model */,
+			);
+			path = MLManager;
+			sourceTree = "<group>";
+		};
+		BE1FF81E2C6DF481000635C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE1FF81C2C6DF473000635C1 /* GraphNeighbor.swift */,
+				BE1FF81A2C6DF463000635C1 /* GraphNode.swift */,
+				BE1FF81F2C6DF4EC000635C1 /* GraphNodeType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BE5B3C822C67D76300764CCD = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				BE5B3CBE2C68EF6A00764CCD /* Array+Extension.swift */,
+				BE1FF8122C6DF347000635C1 /* MLMultiArray+Extension.swift */,
+				BE1FF8142C6DF364000635C1 /* UIImage+Extension.swift */,
 				BE5B3CCA2C68F15C00764CCD /* View+Extension.swift */,
 			);
 			path = Extension;
@@ -261,6 +313,7 @@
 		BE5B3CD92C6901BD00764CCD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BE1FF8112C6DF30A000635C1 /* MLManager */,
 				BE5B3CDA2C6901C000764CCD /* UserDefaults */,
 			);
 			path = Core;
@@ -280,6 +333,7 @@
 			children = (
 				BE72ED972C6C06620073B47E /* Controller */,
 				BEF2C3352C69F4240027A7EB /* Delegate */,
+				BE1FF80C2C6DF2B1000635C1 /* MLModel */,
 				BE5B3CC02C68EFBA00764CCD /* Model */,
 				BE5B3CE82C6918CD00764CCD /* Modifier */,
 			);
@@ -398,37 +452,47 @@
 			files = (
 				BE5B3CE02C69035D00764CCD /* UserDefaultsKey.swift in Sources */,
 				BE5B3C932C67D76300764CCD /* HomeViewController.swift in Sources */,
+				BE1FF81B2C6DF463000635C1 /* GraphNode.swift in Sources */,
 				BE43C0272C6AA41800F515ED /* Pushable.swift in Sources */,
 				BE5B3CB72C68E24F00764CCD /* HomeScene.swift in Sources */,
+				BE1FF8222C6E0B98000635C1 /* MLManagerProtocol.swift in Sources */,
 				BE1FF8092C6D617E000635C1 /* UnavailableModel.swift in Sources */,
 				BE5B3CDC2C6901D100764CCD /* UserDefaultsManager.swift in Sources */,
 				BE72ED942C6C063B0073B47E /* TriangleViewModel.swift in Sources */,
+				BE1FF8202C6DF4EC000635C1 /* GraphNodeType.swift in Sources */,
 				BE5B3CA72C68DD5000764CCD /* AppContainer.swift in Sources */,
 				BE5B3CD62C69017B00764CCD /* OnboardingScene.swift in Sources */,
 				BE5B3CC72C68F01400764CCD /* HomeSceneType.swift in Sources */,
 				BE5B3CBF2C68EF6A00764CCD /* Array+Extension.swift in Sources */,
+				BE1FF80E2C6DF2C4000635C1 /* HKOD.mlpackage in Sources */,
 				BE1FF80B2C6D6422000635C1 /* Unavailable.swift in Sources */,
 				BE43C02F2C6AA88E00F515ED /* PDFModel.swift in Sources */,
 				BE5B3CB92C68E45500764CCD /* TriangleViewController.swift in Sources */,
 				BE5B3CED2C691EB800764CCD /* TabBarController.swift in Sources */,
 				BE5B3CBB2C68EF1000764CCD /* Home+UI.swift in Sources */,
 				BE5B3CD32C68F53100764CCD /* HomeDetail+UI.swift in Sources */,
+				BE1FF8132C6DF347000635C1 /* MLMultiArray+Extension.swift in Sources */,
+				BE1FF8192C6DF45D000635C1 /* Graph.swift in Sources */,
 				BE43C0212C6AA40500F515ED /* Presentable.swift in Sources */,
 				BEF2C3342C6963730027A7EB /* PDFViewerViewController.swift in Sources */,
 				BE5B3C8F2C67D76300764CCD /* AppDelegate.swift in Sources */,
 				BE5B3CD82C69018900764CCD /* Onboarding+UI.swift in Sources */,
 				BE72ED962C6C064B0073B47E /* TriangleContracts.swift in Sources */,
+				BE1FF81D2C6DF473000635C1 /* GraphNeighbor.swift in Sources */,
 				BE5B3CEA2C6918E700764CCD /* Auth.swift in Sources */,
 				BE5B3CC22C68EFBF00764CCD /* HomeModel.swift in Sources */,
 				BE5B3CE62C69189500764CCD /* OnboardingModel.swift in Sources */,
 				BE5B3CA52C68DD2C00764CCD /* AppRouter.swift in Sources */,
 				BE5B3CD12C68F51D00764CCD /* HomeDetailScene.swift in Sources */,
+				BE1FF8152C6DF364000635C1 /* UIImage+Extension.swift in Sources */,
 				BE5B3CCB2C68F15C00764CCD /* View+Extension.swift in Sources */,
 				BE43C0252C6AA40E00F515ED /* Alertable.swift in Sources */,
 				BE5B3CDE2C6901E200764CCD /* UserDefaultsContracts.swift in Sources */,
 				BE5B3CE22C6916F500764CCD /* OnboardingViewController.swift in Sources */,
 				BE43C0292C6AA42100F515ED /* Loadable.swift in Sources */,
 				BE72ED9D2C6C0A000073B47E /* StatefulViewController.swift in Sources */,
+				BE1FF8172C6DF3A7000635C1 /* MLManager.swift in Sources */,
+				BE1FF8102C6DF2D3000635C1 /* FCRN.mlmodel in Sources */,
 				BE43C02B2C6AA60E00F515ED /* Dismissable.swift in Sources */,
 				BE5B3CE42C69178D00764CCD /* OnboardingViewModel.swift in Sources */,
 				BE43C02D2C6AA66E00F515ED /* AlertModel.swift in Sources */,

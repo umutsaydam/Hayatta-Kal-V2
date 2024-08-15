@@ -9,7 +9,6 @@ import Foundation
 
 final class AppContainer {
     let router = AppRouter()
-    let triangleViewModel = TriangleViewModel()
 }
 
 let appContainer: AppContainer = .init()

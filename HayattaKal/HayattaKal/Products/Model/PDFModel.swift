@@ -8,6 +8,6 @@
 import UIKit
 
 struct PDFModel {
-    let image: UIImage
+    var image: UIImage?
     let description: String
 }

@@ -12,8 +12,7 @@ protocol TriangleViewModelProtocol {
     var delegate: TriangleViewModelDelegate? { get set }
 
     func viewDidLoad()
-    func viewWillAppear()
-    func viewDidAppear()
+    func viewDidDisappear()
     func handleImagePickerOutput(_ output: TriangleViewControllerImagePickerOutput)
 }
 

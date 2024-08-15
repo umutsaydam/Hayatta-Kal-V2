@@ -1,0 +1,46 @@
+//
+//  GraphNodeType.swift
+//  HayattaKal
+//
+//  Created by Yunus Emre Berdibek on 15.08.2024.
+//
+
+import UIKit
+
+enum GraphNodeType: String {
+    case dolap, koltuk, masa, sifonyer, yatak
+
+    var name: String {
+        rawValue.capitalized
+    }
+
+    var safetyPercentage: CGFloat {
+        switch self {
+        case .dolap:
+            0.40
+        case .koltuk:
+            0.75
+        case .masa:
+            0.55
+        case .sifonyer:
+            0.60
+        case .yatak:
+            0.90
+        }
+    }
+
+    var uiColor: UIColor {
+        switch self {
+        case .dolap:
+            UIColor.systemYellow
+        case .koltuk:
+            UIColor.systemOrange
+        case .masa:
+            UIColor.systemBlue
+        case .sifonyer:
+            UIColor.systemMint
+        case .yatak:
+            UIColor.systemGreen
+        }
+    }
+}

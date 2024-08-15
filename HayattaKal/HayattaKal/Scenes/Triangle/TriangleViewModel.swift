@@ -8,27 +8,57 @@
 import UIKit
 
 final class TriangleViewModel {
+    var selectedImage: UIImage?
+
     var delegate: TriangleViewModelDelegate?
+    var mlManager: MLManager?
+
+    init() {
+        setUpMLManager()
+    }
 }
 
-// MARK: - Publics
+// MARK: - TriangleViewModel + TriangleViewModelProtocol
 
 extension TriangleViewModel: TriangleViewModelProtocol {
     func viewDidLoad() {
         delegate?.showUnavailable(.imagePicker)
     }
 
-    func viewWillAppear() {}
-
-    func viewDidAppear() {}
+    func viewDidDisappear() {
+        delegate?.loadable(false)
+        delegate?.showUnavailable(.imagePicker)
+    }
 
     func handleImagePickerOutput(_ output: TriangleViewControllerImagePickerOutput) {
         switch output {
-        case .didSelectImage(let uIImage):
+        case .didSelectImage(let uiImage):
             delegate?.dismiss(true)
-        //    delegate?.hideUnavailable()
+            delegate?.loadable(true)
+
+            mlManager?.findSafetyArea(uiImage)
         case .didSelectCancel:
-            delegate?.dismiss(true)
+            break
+        }
+    }
+}
+
+// MARK: - TriangleViewModel + MLManagerProtocolDelegate
+
+extension TriangleViewModel: MLManagerProtocolDelegate {
+    func handleMLManagerOutput(_ output: [PDFModel]) {
+        mlManager = nil
+        delegate?.loadable(false)
+
+        createPDF(from: output) { [weak self] pdfURL in
+            if let pdfURL = pdfURL {
+                let navVC = UINavigationController(rootViewController: PDFViewerViewController(pdfURL: pdfURL))
+                self?.delegate?.present(navVC, completion: { [weak self] bool in
+                    if bool {
+                        self?.setUpMLManager()
+                    }
+                })
+            }
         }
     }
 }
@@ -36,20 +66,12 @@ extension TriangleViewModel: TriangleViewModelProtocol {
 // MARK: - Privates
 
 private extension TriangleViewModel {
+    func setUpMLManager() {
+        mlManager = MLManager()
+        mlManager?.delegate = self
+    }
+
     func createPDF(from pages: [PDFModel], completion: @escaping (URL?) -> Void) {
-        /*
-         let images = [UIImage(named: "Onboarding1")!, UIImage(named: "Onboarding2")!, UIImage(named: "Onboarding3")!]
-         let descriptions = ["Bu birinci resmin açıklaması", "Bu ikinci resmin açıklaması", "Bu üçüncü resmin açıklaması"]
-         let pages = zip(images, descriptions).map { PDFModel(image: $0.0, description: $0.1) }
-
-         createPDF(from: pages) { pdfURL in
-             if let pdfURL = pdfURL {
-                 let navVC = UINavigationController(rootViewController: PDFViewerViewController(pdfURL: pdfURL))
-                 self.present(navVC, animated: true)
-             }
-         }
-         */
-
         let format = UIGraphicsPDFRendererFormat()
         let metaData = [
             kCGPDFContextTitle: "PDF Document",
@@ -65,7 +87,9 @@ private extension TriangleViewModel {
             for (index, pageContent) in pages.enumerated() {
                 context.beginPage()
 
-                pageContent.image.draw(in: pageRect)
+                if let image = pageContent.image {
+                    image.draw(in: pageRect)
+                }
 
                 let descriptionAttributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont.systemFont(ofSize: 12),

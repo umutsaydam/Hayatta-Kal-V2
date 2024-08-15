@@ -8,11 +8,13 @@
 import UIKit
 
 protocol Presentable {
-    func present(_ viewControllerToPresent: UIViewController)
+    func present(_ viewControllerToPresent: UIViewController, completion: @escaping (Bool) -> Void)
 }
 
 extension Presentable where Self: UIViewController {
-    func present(_ viewControllerToPresent: UIViewController) {
-        self.present(viewControllerToPresent, animated: true)
+    func present(_ viewControllerToPresent: UIViewController, completion: @escaping (Bool) -> Void) {
+        self.present(viewControllerToPresent, animated: true) {
+            completion(true)
+        }
     }
 }

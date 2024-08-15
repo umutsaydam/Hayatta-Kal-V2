@@ -9,24 +9,20 @@ import PDFKit
 import UIKit
 
 final class TriangleViewController: StatefulViewController {
-    var viewModel: TriangleViewModelProtocol? {
-        didSet {
-            viewModel?.delegate = self
-        }
-    }
+    var viewModel: TriangleViewModelProtocol = TriangleViewModel()
 
     lazy var imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //  setupNavigationBar()
 
+        viewModel.delegate = self
         imagePicker.delegate = self
-        viewModel?.viewDidLoad()
+        viewModel.viewDidLoad()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        viewModel?.viewWillAppear()
+    override func viewDidDisappear(_ animated: Bool) {
+        viewModel.viewDidDisappear()
     }
 
     override func imageTapGestureRecognizer() {
@@ -52,11 +48,11 @@ extension TriangleViewController: UIImagePickerControllerDelegate {
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
-            viewModel?.handleImagePickerOutput(.didSelectImage(selectedImage))
+            viewModel.handleImagePickerOutput(.didSelectImage(selectedImage))
         }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        viewModel?.handleImagePickerOutput(.didSelectCancel)
+        viewModel.handleImagePickerOutput(.didSelectCancel)
     }
 }
