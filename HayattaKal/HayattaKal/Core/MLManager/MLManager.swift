@@ -337,7 +337,7 @@ private extension MLManager {
             let pdfModel = outputModel.imagePDFModel,
             let image = pdfModel.image,
             let safetyNode = graph.findSafetyNode() else { return }
-        var isSafety = true
+        //  var isSafety = true
         let imageSize: CGSize = image.size
         let scale: CGFloat = 0
 
@@ -365,7 +365,8 @@ private extension MLManager {
             let safetyType = safetyNode.first.type
 
             if safetyType == .dolap || safetyType == .masa || safetyType == .sifonyer {
-                isSafety = false
+                //    isSafety = false
+                // Show aler
             }
 
             context.setFillColor(UIColor.red.withAlphaComponent(0.5).cgColor)
@@ -391,11 +392,6 @@ private extension MLManager {
     }
 
     func drawGraph() {
-        guard
-            let pdfModel = outputModel.imagePDFModel,
-            let image = pdfModel.image
-        else { return }
-
         let pageSize = CGSize(width: 595, height: 842) // Standart A4 boyutu
         let padding: CGFloat = 40.0
         let pageRect = CGRect(origin: .zero, size: pageSize)
