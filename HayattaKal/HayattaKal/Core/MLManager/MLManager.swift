@@ -393,16 +393,22 @@ private extension MLManager {
     func drawGraph() {
         guard
             let pdfModel = outputModel.imagePDFModel,
-            let image = pdfModel.image else { return }
-        let imageSize: CGSize = image.size
-        let scale: CGFloat = 0
+            let image = pdfModel.image
+        else { return }
 
-        UIGraphicsBeginImageContextWithOptions(imageSize, false, scale)
+        let pageSize = CGSize(width: 595, height: 842) // Standart A4 boyutu
+        let padding: CGFloat = 40.0
+        let pageRect = CGRect(origin: .zero, size: pageSize)
+        let contentRect = pageRect.insetBy(dx: padding, dy: padding) // Sayfa içeriği alanı
+
+        UIGraphicsBeginImageContextWithOptions(pageRect.size, false, 0.0)
         UIColor.white.setFill()
-        UIRectFill(CGRect(origin: .zero, size: imageSize))
+        UIRectFill(pageRect)
 
         guard let context = UIGraphicsGetCurrentContext() else { return }
         context.setLineWidth(2.0)
+
+        context.translateBy(x: contentRect.origin.x, y: contentRect.origin.y)
 
         for node in self.graph.nodes {
             let nodeSize = CGSize(width: 200, height: 200)
@@ -430,7 +436,6 @@ private extension MLManager {
 
             text.draw(in: textRect, withAttributes: [NSAttributedString.Key.font: font])
         }
-
         context.setStrokeColor(UIColor.black.cgColor)
         context.setLineWidth(5.0)
 
@@ -443,7 +448,6 @@ private extension MLManager {
                (neighbor.second.id == safetyNode.first.id && neighbor.first.id == safetyNode.second?.id)
             {
                 context.setStrokeColor(UIColor.red.cgColor)
-
             } else {
                 context.setStrokeColor(UIColor.black.cgColor)
             }

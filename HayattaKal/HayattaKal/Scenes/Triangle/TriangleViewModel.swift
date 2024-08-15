@@ -81,6 +81,9 @@ private extension TriangleViewModel {
 
         let pageSize = CGSize(width: 595, height: 842)
         let pageRect = CGRect(origin: .zero, size: pageSize)
+        let padding: CGFloat = 40 // Padding miktarı
+        let contentRect = pageRect.insetBy(dx: padding, dy: padding) // İçerik alanı
+
         let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
 
         let data = renderer.pdfData { context in
@@ -88,22 +91,33 @@ private extension TriangleViewModel {
                 context.beginPage()
 
                 if let image = pageContent.image {
-                    image.draw(in: pageRect)
+                    let aspectRatio = image.size.width / image.size.height
+                    let targetWidth = contentRect.width
+                    let targetHeight = contentRect.height
+                    let scaledHeight = min(targetWidth / aspectRatio, targetHeight)
+                    let scaledWidth = scaledHeight * aspectRatio
+                    let imageX = contentRect.midX - scaledWidth / 2
+                    let imageY = contentRect.midY - scaledHeight / 2
+
+                    let imageRect = CGRect(x: imageX, y: imageY, width: scaledWidth, height: scaledHeight)
+                    image.draw(in: imageRect)
                 }
 
+                // Açıklama metnini çiz
                 let descriptionAttributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont.systemFont(ofSize: 12),
                     .foregroundColor: UIColor.black
                 ]
-                let descriptionRect = CGRect(x: 20, y: pageSize.height - 80, width: pageSize.width - 40, height: 50)
+                let descriptionRect = CGRect(x: contentRect.origin.x, y: contentRect.maxY - 60, width: contentRect.width, height: 50)
                 pageContent.description.draw(in: descriptionRect, withAttributes: descriptionAttributes)
 
+                // Sayfa numarasını çiz
                 let pageNumberText = "Page \(index + 1) of \(pages.count)"
                 let pageNumberAttributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont.systemFont(ofSize: 12),
                     .foregroundColor: UIColor.black
                 ]
-                let pageNumberRect = CGRect(x: 20, y: 20, width: pageSize.width - 40, height: 50)
+                let pageNumberRect = CGRect(x: contentRect.origin.x, y: contentRect.origin.y - padding + 20, width: contentRect.width, height: 20)
                 pageNumberText.draw(in: pageNumberRect, withAttributes: pageNumberAttributes)
             }
         }
